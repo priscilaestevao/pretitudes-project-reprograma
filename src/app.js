@@ -28,6 +28,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/", index);
-app.use("/eleicoes2020", candidates);
+app.use("/candidaturas-negras", candidates);
 
 module.exports = app;
