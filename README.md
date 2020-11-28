@@ -30,7 +30,7 @@ Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https:/
 - [ ] Atualização de cadastro de candidaturas
 - [ ] Remoção de candidaturas que não façam parte de movimentos populares
 
-## **Requisitos**
+## **Tecnologias, dependências e bibliotecas**
 
 :heavy_check_mark: JavaScript
 
