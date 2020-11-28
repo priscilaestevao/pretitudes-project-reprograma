@@ -1,0 +1,33 @@
+{
+  "name": "pretitudes",
+  "version": "1.0.0",
+  "description": "black candidates api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priscilaestevao/pretitudes.git"
+  },
+  "keywords": [
+    "javascript",
+    "api",
+    "nodejs",
+    "crud",
+    "http",
+    "mongodb"
+  ],
+  "author": "priscilaestevao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priscilaestevao/pretitudes/issues"
+  },
+  "homepage": "https://github.com/priscilaestevao/pretitudes#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.17",
+    "nodemon": "^2.0.6"
+  }
+}
