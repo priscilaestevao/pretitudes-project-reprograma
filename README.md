@@ -22,8 +22,8 @@ A ausência de representação negra nos parlamentos é um problema há muito de
 Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https://votosantirracistas2020.com.br/), uma plataforma on-line que reúne e apresenta candidaturas negras comprometidas politicamente com as pautas históricas dos movimentos negros do Brasil, explicitadas no [Manifesto Enquanto Houver Racismo Não Haverá Democracia](https://comracismonaohademocracia.org.br/), na [Carta de Princípios e Agenda da Coalizão Negra por Direitos](https://coalizaonegrapordireitos.org.br/sobre/), na [Agenda Marielle Franco](https://www.agendamarielle.com/) e na [Carta da Convergência Negra em defesa da vida, do emprego e da participação negra na política](https://www.abpn.org.br/post/carta-resultante-da-plen%C3%A1ria-nacional-da-converg%C3%AAncia-negra).
 
 ## **Funcionalidades**
-- [ ] Cadastro de candidaturas negras
-- [ ] Lista de todas as candidaturas negras cadastradas
+- [X] Cadastro de candidaturas negras
+- [X] Lista de todas as candidaturas negras cadastradas
 - [ ] Lista de candidaturas negras por cidade da Região Metropolitana do Recife
 - [ ] Lista de candidaturas negras por movimento
 - [ ] Lista de candidaturas negras eleitas em 2020 por cargo representativo
@@ -66,9 +66,9 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 
 ## **Entregas**
 
-- [ ] Documentação do projeto (objetivo, tecnologias, aprendizados, instruções para utilização da API, informações sobre as rotas) - readme no Github
+- [X] Documentação do projeto (objetivo, tecnologias, aprendizados, instruções para utilização da API, informações sobre as rotas) - readme no Github
 
-- [ ] Link do Github contendo o código do projeto
+- [X] Link do Github contendo o código do projeto
 
 - [ ] Link da API no heroku (deploy)
 
