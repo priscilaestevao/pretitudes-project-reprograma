@@ -10,19 +10,39 @@ const allCandidates = (req, res) => {
 };
 
 const createCandidate = (req, res) => {
-  const newCandidate = new candidatesModel(req.body)
+  const newCandidate = new candidatesModel(req.body);
   newCandidate.save((err) => {
     if (err) {
       return res.status(424).send({ message: err.message });
     }
     res.status(201).send({
       message: "Successfully registered!",
-      candidate: newCandidate
+      candidate: newCandidate,
     });
-  })
+  });
+};
+
+const updateRegistration = (req, res) => {
+  const id = req.params.id;
+  const updateCandidate = req.body;
+
+  candidatesModel.findByIdAndUpdate(
+    id,
+    updateCandidate,
+    (err, candidate) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
+      }
+      else if (candidate) {
+        return res.status(200).send("Updated successfully!");
+      }
+      res.status(404).send("Not found!")
+    }
+  );
 };
 
 module.exports = {
   allCandidates,
-  createCandidate
+  createCandidate,
+  updateRegistration,
 };
