@@ -17,7 +17,7 @@ A ideia é que ela possa ser aproveitada por um programa de formação política
 
 A ausência de representação negra nos parlamentos é um problema há muito denunciado pelos movimentos negros brasileiros. Se no Brasil mais de 56% das pessoas se declaram negras, os dados de composição racial nas casas legislativas espalhadas pelo país demonstram o tamanho do abismo. Segundo dados do TSE, negros somam 24,4% dos deputados federais e 28,9% dos deputados estaduais eleitos em 2018 e, dos vereadores eleitos em 2016, somam 42,1% de pretos e pardos. (Fonte: Votos Antirarcistas, 2020)
 
-## **Fonte das informações**
+## **Fonte dos dados**
 
 Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https://votosantirracistas2020.com.br/), uma plataforma on-line que reúne e apresenta candidaturas negras comprometidas politicamente com as pautas históricas dos movimentos negros do Brasil, explicitadas no [Manifesto Enquanto Houver Racismo Não Haverá Democracia](https://comracismonaohademocracia.org.br/), na [Carta de Princípios e Agenda da Coalizão Negra por Direitos](https://coalizaonegrapordireitos.org.br/sobre/), na [Agenda Marielle Franco](https://www.agendamarielle.com/) e na [Carta da Convergência Negra em defesa da vida, do emprego e da participação negra na política](https://www.abpn.org.br/post/carta-resultante-da-plen%C3%A1ria-nacional-da-converg%C3%AAncia-negra).
 
@@ -37,6 +37,8 @@ Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https:/
 :heavy_check_mark: NodeJS
 
 :heavy_check_mark: MongoDB
+
+:heavy_check_mark: Git/GitHub
 
 :heavy_check_mark: ExpressJS
 
@@ -62,4 +64,20 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 
 - DELETE (método delete) `/candidaturas-negras/:_id` - emoção de candidaturas por id
 
+## **Entregas**
+
+- [ ] Documentação do projeto (objetivo, tecnologias, aprendizados, instruções para utilização da API, informações sobre as rotas) - readme no Github
+
+- [ ] Link do Github contendo o código do projeto
+
+- [ ] Link da API no heroku (deploy)
+
 ## **Referências**
+
+[{reprograma} - Projeto Final](https://github.com/reprograma/on7-porto-s17-s18-projeto-livre)
+
+[Como escrever um README.md sensacional no Github](https://dev.to/reginadiana/como-escrever-um-readme-md-sensacional-no-github-4509#o-que-%C3%A9-o-readme)
+
+[Inspiração: Pokemons API (autoria: @AnnaNee)](https://github.com/AnnaNee/pokemons-api)
+
+[Votos Antirracistas](https://votosantirracistas2020.com.br/)
