@@ -29,8 +29,8 @@ Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https:/
 - [ ] Lista de candidaturas negras por cidade da Região Metropolitana do Recife
 - [ ] Lista de candidaturas negras por movimento
 - [ ] Lista de candidaturas negras eleitas em 2020 por cargo representativo
-- [ ] Atualização de cadastro de candidaturas
-- [ ] Remoção de candidaturas que não façam parte de movimentos populares
+- [X] Atualização de cadastro de candidaturas
+- [X] Remoção de candidaturas que não façam parte de movimentos populares
 
 ## **Tecnologias, dependências e bibliotecas**
 
