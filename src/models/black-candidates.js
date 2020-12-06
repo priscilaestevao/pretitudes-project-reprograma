@@ -9,6 +9,7 @@ const candidatesSchema = new mongoose.Schema(
     cidade: { type: String },
     estado: { type: String },
     movimentoSocial: { type: String },
+    tipoCandidatura: { type: String },
     partido: { type: String },
     vezesCandidato: { type: Number },
     eleita: { type: Boolean }
