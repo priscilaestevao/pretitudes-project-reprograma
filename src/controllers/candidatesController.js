@@ -38,9 +38,8 @@ const updateRegistration = (req, res) => {
 };
 
 const removeCandidateByEmptyPopularMovement = (req, res) => {
-  candidatesModel.findOneAndDelete(
-    { movimentoSocial: "" },
-    (err, popularMovement) => {
+  const params = req.query;
+  candidatesModel.deleteMany(params, (err, popularMovement) => {
       if (err) {
         return res.status(424).send({ message: err.message });
       } else if (popularMovement) {
