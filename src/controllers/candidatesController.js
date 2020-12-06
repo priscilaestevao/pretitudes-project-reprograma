@@ -24,19 +24,25 @@ const candidatesById = (req, res) => {
 
 const candidatesByCity = (req, res) => {
   const city = req.params.cidade;
-  candidates.findByCity(city, (err, candidatesRMRList) => {
-    if (err) {
-      return res.status(424).send({ message: err.message });
-    } else if (candidatesRMRList) {
-      return res.status(200).send({
-        nome: nomeSocial,
-        movimento: movimentoSocial,
-        candidatura: tipoCandidatura,
-        partido: partido,
-      });
+  candidates.find(
+    { cidade: city },
+    {
+      nomeSocial: 1,
+      email: 1,
+      movimentoSocial: 1,
+      tipoCandidatura: 1,
+      partido: 1,
+      _id: 0,
+    },
+    (err, candidatesRMRList) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
+      } else if (candidatesRMRList) {
+        return res.status(200).send(candidatesRMRList);
+      }
+      res.status(404).send("City not found!");
     }
-    res.status(404).send("City not found!");
-  });
+  );
 };
 
 const createCandidate = (req, res) => {
