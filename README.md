@@ -28,7 +28,7 @@ Também está sendo usada como fonte de complemento de dados o site do [TSE](htt
 ## **Funcionalidades**
 - [X] Cadastro de candidaturas negras
 - [X] Lista de todas as candidaturas negras cadastradas
-- [ ] Lista de candidaturas negras por cidade da Região Metropolitana do Recife
+- [X] Lista de candidaturas negras por cidade da Região Metropolitana do Recife
 - [ ] Lista de candidaturas negras por movimento
 - [ ] Lista de candidaturas negras eleitas em 2020 por cargo representativo
 - [X] Atualização de cadastro de candidaturas
