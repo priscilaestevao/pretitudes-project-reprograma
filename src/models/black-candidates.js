@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const candidatesSchema = new mongoose.Schema(
   {
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
-    nome: { type: String },
+    nomeTRE: { type: String },
     nomeSocial: { type: String },
     dataNascimento: { type: String },
     genero: { type: String },
