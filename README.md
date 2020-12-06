@@ -9,7 +9,7 @@
 
 ## **Apresentação**
 
-O "Pretitudes" é o projeto de conclusão do bootcamp de Back-end da [{reprograma}](https://reprograma.com.br/), em parceria com o [projeto MINAs do Porto Digital](https://www.portodigital.org/capital-humano/iniciativas-para-a-diversidade/mulheres-em-inovacao-negocios-e-artes-minas). Essa é uma API que tem por objetivo reunir informações sobre as candidaturas negras comprometidas com a pauta antirracista em na Região Metropolitana do Recife.
+O "Pretitudes" é o projeto de conclusão do bootcamp de Back-end da [{reprograma}](https://reprograma.com.br/), em parceria com o [projeto MINAs do Porto Digital](https://www.portodigital.org/capital-humano/iniciativas-para-a-diversidade/mulheres-em-inovacao-negocios-e-artes-minas). Essa é uma API que tem por objetivo reunir informações sobre as candidaturas negras comprometidas com a pauta antirracista na Região Metropolitana do Recife.
 
 A ideia é que ela possa ser aproveitada por um programa de formação política e qualificação, quem sabe até de investimento, potencializando o movimento negro no próximo pleito eleitoral em 2024.
 
@@ -22,6 +22,8 @@ A ausência de representação negra nos parlamentos é um problema há muito de
 ## **Fonte dos dados**
 
 Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https://votosantirracistas2020.com.br/), uma plataforma on-line que reúne e apresenta candidaturas negras comprometidas politicamente com as pautas históricas dos movimentos negros do Brasil, explicitadas no [Manifesto Enquanto Houver Racismo Não Haverá Democracia](https://comracismonaohademocracia.org.br/), na [Carta de Princípios e Agenda da Coalizão Negra por Direitos](https://coalizaonegrapordireitos.org.br/sobre/), na [Agenda Marielle Franco](https://www.agendamarielle.com/) e na [Carta da Convergência Negra em defesa da vida, do emprego e da participação negra na política](https://www.abpn.org.br/post/carta-resultante-da-plen%C3%A1ria-nacional-da-converg%C3%AAncia-negra).
+
+Também está sendo usada como fonte de complemento de dados o site do [TSE](https://divulgacandcontas.tse.jus.br/divulga/#/) de divulgação de candidaturas e contas eleitorais.
 
 ## **Funcionalidades**
 - [X] Cadastro de candidaturas negras
@@ -64,7 +66,7 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 
 - UPDATE (método put) `/candidaturas-negras/:_id` - atualização de cadastro de candidaturas por id
 
-- DELETE (método delete) `/candidaturas-negras/:_id` - emoção de candidaturas por id
+- DELETE (método delete) `/candidaturas-negras/participacao?movimentoSocial=unidefined` - remoção de candidaturas que não são de movimento social
 
 ## **Entregas**
 
