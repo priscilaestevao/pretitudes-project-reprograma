@@ -5,6 +5,6 @@ const controller = require("../controllers/candidatesController");
 router.get("/", controller.allCandidates);
 router.post("/", controller.createCandidate);
 router.put("/:id", controller.updateRegistration);
-router.delete("/", controller.removeCandidate);
+router.delete("/", controller.removeCandidateByEmptyPopularMovement);
 
 module.exports = router;

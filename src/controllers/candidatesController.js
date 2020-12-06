@@ -1,3 +1,4 @@
+const candidates = require("../models/black-candidates");
 const candidatesModel = require("../models/black-candidates");
 
 const allCandidates = (req, res) => {
@@ -36,32 +37,51 @@ const updateRegistration = (req, res) => {
   });
 };
 
-const removeCandidate = (req, res) => {
-  const candidateByPopularMovement = req.params.movimentoSocial;
-  candidatesModel.find(candidateByPopularMovement, (err, popularMovement) => {
+const removeCandidateByEmptyPopularMovement = (req, res) => {
+  const hasPopularMovement = req.query.hasPopularMovement;
+
+  candidatesModel.findOneAndDelete({ movimentoSocial: "" }, (err) => {
     if (err) {
       return res.status(424).send({ message: err.message });
-    } else if (popularMovement) {
-      candidateByPopularMovement == undefined;
-      return res.status(200).send("Succssfully removed!");
+    } else if (!hasPopularMovement) {
+      return res.status(200).send("Successfully removed!");
     }
     res.status(404).send("Register not found!");
   });
-
-  //  const id = req.params.id;
-  //  candidatesModel.findOneAndDelete(id, (err, candidate) => {
-  //    if (err) {
-  //      return res.status(424).send({ message: err.message });
-  //    } else if (candidate) {
-  //      return res.status(200).send("Succssfully removed!");
-  //    }
-  //    res.status(404).send("Register not found!")
-  //  });
 };
+
+// const removeCandidateByEmptyPopularMovement = () => {
+//   candidatesModel.findOneAndDelete({ movimentoSocial: "" }, (err, popularMovement) => {
+//     if (err) {
+//       return res.status(424).send({ message: err.message });
+//     } else if (popularMovement) {
+//       return res.status(200).send("Successfully removed!");
+//     }
+//     res.status(404).send("Register not found!");
+//   });
+// }
+
+// const removeCandidate = (req, res) => {
+//   const hasMovimentoSocial = req.query.hasMovimentoSocial;
+//   if (!hasMovimentoSocial) {
+//     removeCandidateByEmptyPopularMovement ()
+//   }
+  
+
+//  const id = req.params.id;
+//  candidatesModel.findOneAndDelete(id, (err, candidate) => {
+//    if (err) {
+//      return res.status(424).send({ message: err.message });
+//    } else if (candidate) {
+//      return res.status(200).send("Succssfully removed!");
+//    }
+//    res.status(404).send("Register not found!")
+//  });
+// };
 
 module.exports = {
   allCandidates,
   createCandidate,
   updateRegistration,
-  removeCandidate,
+  removeCandidateByEmptyPopularMovement
 };
