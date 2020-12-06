@@ -37,21 +37,31 @@ const updateRegistration = (req, res) => {
 };
 
 const removeCandidate = (req, res) => {
-  const id = req.params.id;
-
-  candidatesModel.findByIdAndDelete(id, (err, candidate) => {
+  const candidateByPopularMovement = req.params.movimentoSocial;
+  candidatesModel.find(candidateByPopularMovement, (err, popularMovement) => {
     if (err) {
       return res.status(424).send({ message: err.message });
-    } else if (candidate) {
+    } else if (popularMovement) {
+      candidateByPopularMovement == undefined;
       return res.status(200).send("Succssfully removed!");
     }
-    res.status(404).send("Register not found!")
+    res.status(404).send("Register not found!");
   });
+
+  //  const id = req.params.id;
+  //  candidatesModel.findOneAndDelete(id, (err, candidate) => {
+  //    if (err) {
+  //      return res.status(424).send({ message: err.message });
+  //    } else if (candidate) {
+  //      return res.status(200).send("Succssfully removed!");
+  //    }
+  //    res.status(404).send("Register not found!")
+  //  });
 };
 
 module.exports = {
   allCandidates,
   createCandidate,
   updateRegistration,
-  removeCandidate
+  removeCandidate,
 };
