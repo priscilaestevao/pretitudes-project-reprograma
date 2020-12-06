@@ -70,11 +70,11 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 
 ## **Entregas**
 
-- [X] Documentação do projeto (objetivo, tecnologias, aprendizados, instruções para utilização da API, informações sobre as rotas) - readme no Github
+- [X]  [Documentação do projeto (objetivo, tecnologias, aprendizados, instruções para utilização da API, informações sobre as rotas) - readme no Github](https://github.com/priscilaestevao/pretitudes-project-reprograma/blob/main/README.md)
 
-- [X] Link do Github contendo o código do projeto
+- [X]  [Link do Github contendo o código do projeto](https://github.com/priscilaestevao/pretitudes-project-reprograma)
 
-- [ ] Link da API no heroku (deploy)
+- [X]  [Link da API no heroku (deploy)](https://pretitudes-project-reprograma.herokuapp.com/)
 
 ## **Referências**
 
