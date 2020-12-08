@@ -3,6 +3,7 @@ const router = express.Router();
 const controller = require("../controllers/candidatesController");
 
 router.get("/", controller.allCandidates);
+router.get("/lista-movimentos", controller.allPopularMovements);
 router.get("/:id", controller.candidatesById);
 router.get("/cidade/:cidade", controller.candidatesByCity);
 router.post("/", controller.createCandidate);

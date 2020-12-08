@@ -1,4 +1,3 @@
-const candidates = require("../models/black-candidates");
 const candidatesModel = require("../models/black-candidates");
 
 const allCandidates = (req, res) => {
@@ -7,6 +6,16 @@ const allCandidates = (req, res) => {
       return res.status(424).send({ message: err.message });
     }
     res.status(200).send(candidatesList);
+  });
+};
+
+const allPopularMovements = (req, res) => {
+  candidatesModel.find((err, movementList) => {
+    const popularMovement = movementList.map((popularMovement) => popularMovement.movimentoSocial)
+    if (err) {
+      return res.status(424).send({ message: err.message });
+    }
+    res.status(200).send(popularMovement);
   });
 };
 
@@ -24,7 +33,7 @@ const candidatesById = (req, res) => {
 
 const candidatesByCity = (req, res) => {
   const city = req.params.cidade;
-  candidates.find(
+  candidatesModel.find(
     { cidade: city },
     {
       nomeSocial: 1,
@@ -86,6 +95,7 @@ const removeCandidateByEmptyPopularMovement = (req, res) => {
 
 module.exports = {
   allCandidates,
+  allPopularMovements,
   candidatesById,
   candidatesByCity,
   createCandidate,
