@@ -23,20 +23,18 @@ A ausência de representação negra nos parlamentos é um problema há muito de
 
 Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https://votosantirracistas2020.com.br/), uma plataforma on-line que reúne e apresenta candidaturas negras comprometidas politicamente com as pautas históricas dos movimentos negros do Brasil, explicitadas no [Manifesto Enquanto Houver Racismo Não Haverá Democracia](https://comracismonaohademocracia.org.br/), na [Carta de Princípios e Agenda da Coalizão Negra por Direitos](https://coalizaonegrapordireitos.org.br/sobre/), na [Agenda Marielle Franco](https://www.agendamarielle.com/) e na [Carta da Convergência Negra em defesa da vida, do emprego e da participação negra na política](https://www.abpn.org.br/post/carta-resultante-da-plen%C3%A1ria-nacional-da-converg%C3%AAncia-negra).
 
-Também está sendo usada como fonte de complemento de dados o site do [TSE](https://divulgacandcontas.tse.jus.br/divulga/#/) de divulgação de candidaturas e contas eleitorais.
+Também é usada como complemento de dados o site do [Tribunal Superior Eleitoral - TSE](https://divulgacandcontas.tse.jus.br/divulga/#/).
 
 ## **Funcionalidades**
 - [X] Cadastro de candidaturas negras
 - [X] Lista de todas as candidaturas negras cadastradas
 - [X] Lista de todos os movimentos sociais das candidaturas negras cadastradas
 - [X] Lista de candidaturas negras por cidade da Região Metropolitana do Recife
-- [ ] Lista de candidaturas negras eleitas em 2020 por cargo representativo
+- [X] Lista de candidaturas negras eleitas em 2020
 - [X] Atualização de cadastro de candidaturas
 - [X] Remoção de candidaturas que não façam parte de movimentos sociais
 
 ## **Tecnologias, dependências e bibliotecas**
-
-:heavy_check_mark: JavaScript
 
 :heavy_check_mark: NodeJS
 
@@ -50,6 +48,12 @@ Também está sendo usada como fonte de complemento de dados o site do [TSE](htt
 
 :heavy_check_mark: Nodemon
 
+### **Instruções de instalação**
+
+Para baixar esse repositório, é necessário que realizar um `fork` do mesmo e em seguida copiar o código e clonar em sua máquina através do `git clone <link_do_fork_do_repositorio>` no seu **Prompt de Comando**.
+
+Em seguida, digite `npm install` para baixar todas as dependências necessárias à utilização da API.
+
 ## **Rotas HTTP**
 
 A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser acessadas é necessário usar `http://localhost:8080/` antes dos endpoints de requisição.
@@ -62,7 +66,7 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 
 - READ (método get) `/candidaturas-negras/cidade/<nome-da-cidade>` - candidaturas negras por cidade;
 
-- READ (método get) `/candidaturas-negras/eleitas` - candidaturas negras eleitas em 2020 por cargo representativo;
+- READ (método get) `/candidaturas-negras/eleitas2020` - candidaturas negras eleitas em 2020 por cargo representativo;
 
 - UPDATE (método put) `/candidaturas-negras/:_id` - atualização de cadastro de candidaturas por id
 
