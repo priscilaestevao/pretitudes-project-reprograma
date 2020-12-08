@@ -10,14 +10,11 @@ const allCandidates = (req, res) => {
 };
 
 const allPopularMovements = (req, res) => {
-  candidatesModel.find((err, movementList) => {
-    const popularMovement = movementList.map(
-      (popularMovement) => popularMovement.movimentoSocial
-    );
+  candidatesModel.find().distinct("movimentoSocial", (err, movementList) => {
     if (err) {
       return res.status(424).send({ message: err.message });
     }
-    res.status(200).send(popularMovement);
+    res.status(200).send(movementList);
   });
 };
 
