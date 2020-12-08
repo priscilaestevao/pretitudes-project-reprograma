@@ -4,6 +4,7 @@ const controller = require("../controllers/candidatesController");
 
 router.get("/", controller.allCandidates);
 router.get("/lista-movimentos", controller.allPopularMovements);
+router.get("/eleitos2020", controller.electedCandidates);
 router.get("/:id", controller.candidateById);
 router.get("/cidade/:cidade", controller.candidatesByCity);
 router.post("/", controller.createCandidate);

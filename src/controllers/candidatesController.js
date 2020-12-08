@@ -49,6 +49,21 @@ const candidatesByCity = (req, res) => {
   );
 };
 
+const electedCandidates = (req, res) => {
+  candidatesModel.find(
+    { eleita: true },
+    { nomeSocial: 1, cidade: 1, tipoCandidatura: 1, partido: 1, _id: 0 },
+    (err, candidates) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
+      } else if (candidates) {
+        return res.status(200).send(candidates);
+      }
+      res.status(404).send("Candidates not found!");
+    }
+  );
+};
+
 const createCandidate = (req, res) => {
   const newCandidate = new candidatesModel(req.body);
   newCandidate.save((err) => {
@@ -65,7 +80,6 @@ const createCandidate = (req, res) => {
 const updateRegistration = (req, res) => {
   const id = req.params.id;
   const updateCandidate = req.body;
-
   candidatesModel.findByIdAndUpdate(id, updateCandidate, (err, candidate) => {
     if (err) {
       return res.status(424).send({ message: err.message });
@@ -93,6 +107,7 @@ module.exports = {
   allPopularMovements,
   candidateById,
   candidatesByCity,
+  electedCandidates,
   createCandidate,
   updateRegistration,
   removeCandidateByEmptyPopularMovement,
