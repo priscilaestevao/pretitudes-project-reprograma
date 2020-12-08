@@ -23,7 +23,7 @@ A ausência de representação negra nos parlamentos é um problema há muito de
 
 Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https://votosantirracistas2020.com.br/), uma plataforma on-line que reúne e apresenta candidaturas negras comprometidas politicamente com as pautas históricas dos movimentos negros do Brasil, explicitadas no [Manifesto Enquanto Houver Racismo Não Haverá Democracia](https://comracismonaohademocracia.org.br/), na [Carta de Princípios e Agenda da Coalizão Negra por Direitos](https://coalizaonegrapordireitos.org.br/sobre/), na [Agenda Marielle Franco](https://www.agendamarielle.com/) e na [Carta da Convergência Negra em defesa da vida, do emprego e da participação negra na política](https://www.abpn.org.br/post/carta-resultante-da-plen%C3%A1ria-nacional-da-converg%C3%AAncia-negra).
 
-Também é usada como complemento de dados o site do [Tribunal Superior Eleitoral - TSE](https://divulgacandcontas.tse.jus.br/divulga/#/).
+Também é usado como complemento de dados o site do [Tribunal Superior Eleitoral - TSE](https://divulgacandcontas.tse.jus.br/divulga/#/).
 
 ## **Funcionalidades**
 - [X] Cadastro de candidaturas negras
@@ -81,14 +81,6 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 - UPDATE (método put) `/candidaturas-negras/:_id` - atualização de cadastro de candidaturas por id
 
 - DELETE (método delete) `/candidaturas-negras/participacao?movimentoSocial=unidefined` - remoção de candidaturas que não são de movimento social
-
-## **Contribuindo com o projeto**
-
-
-
-- [X]  [Link do Github contendo o código do projeto](https://github.com/priscilaestevao/pretitudes-project-reprograma)
-
-- [X]  [Link da API no heroku (deploy)](https://pretitudes-project-reprograma.herokuapp.com/)
 
 ## **Referências**
 
