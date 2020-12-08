@@ -1,17 +1,19 @@
 const candidatesModel = require("../models/black-candidates");
 
 const allCandidates = (req, res) => {
-  candidatesModel.find((err, candidatesList) => {
+  candidatesModel.find((err, candidates) => {
     if (err) {
       return res.status(424).send({ message: err.message });
     }
-    res.status(200).send(candidatesList);
+    res.status(200).send(candidates);
   });
 };
 
 const allPopularMovements = (req, res) => {
   candidatesModel.find((err, movementList) => {
-    const popularMovement = movementList.map((popularMovement) => popularMovement.movimentoSocial)
+    const popularMovement = movementList.map(
+      (popularMovement) => popularMovement.movimentoSocial
+    );
     if (err) {
       return res.status(424).send({ message: err.message });
     }
@@ -19,7 +21,7 @@ const allPopularMovements = (req, res) => {
   });
 };
 
-const candidatesById = (req, res) => {
+const candidateById = (req, res) => {
   const id = req.params.id;
   candidatesModel.findById(id, (err, candidate) => {
     if (err) {
@@ -35,19 +37,12 @@ const candidatesByCity = (req, res) => {
   const city = req.params.cidade;
   candidatesModel.find(
     { cidade: city },
-    {
-      nomeSocial: 1,
-      email: 1,
-      movimentoSocial: 1,
-      tipoCandidatura: 1,
-      partido: 1,
-      _id: 0,
-    },
-    (err, candidatesRMRList) => {
+    { nomeSocial: 1, email: 1, movimentoSocial: 1, partido: 1, _id: 0 },
+    (err, candidates) => {
       if (err) {
         return res.status(424).send({ message: err.message });
-      } else if (candidatesRMRList) {
-        return res.status(200).send(candidatesRMRList);
+      } else if (candidates) {
+        return res.status(200).send(candidates);
       }
       res.status(404).send("City not found!");
     }
@@ -96,7 +91,7 @@ const removeCandidateByEmptyPopularMovement = (req, res) => {
 module.exports = {
   allCandidates,
   allPopularMovements,
-  candidatesById,
+  candidateById,
   candidatesByCity,
   createCandidate,
   updateRegistration,
