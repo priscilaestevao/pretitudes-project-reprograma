@@ -48,11 +48,21 @@ Também é usada como complemento de dados o site do [Tribunal Superior Eleitora
 
 :heavy_check_mark: Nodemon
 
-### **Instruções de instalação**
+## **Instruções de instalação e contribuições no projeto**
 
-Para baixar esse repositório, é necessário que realizar um `fork` do mesmo e em seguida copiar o código e clonar em sua máquina através do `git clone <link_do_fork_do_repositorio>` no seu **Prompt de Comando**.
+- Faça um `fork` do projeto através do link (<https://github.com/priscilaestevao/pretitudes-project-reprograma/fork>);
 
-Em seguida, digite `npm install` para baixar todas as dependências necessárias à utilização da API.
+- Copie o código do _fork_ realizado e, no _prompt de comando_ da sua máquina, realize o clone do projeto através do `git clone <link_do_fork_do_repositorio>`;
+
+- Crie uma _branch_ para realizar suas contribuições `git checkout -b feature/<sua_branch>`;
+
+- Instale as dependências necessárias à execução da API através do comando `npm install`;
+
+- Após suas contribuições no projeto, realize o _commit_ com o comando `git commit -m 'sua mensagem'`;
+
+- Para subir o projeto no seu GitHub, basta executar o comando `git push origin feature/<sua_branch>`;
+
+- E finalize criando um novo _Pull Request_ com as contribuições para o projeto original.
 
 ## **Rotas HTTP**
 
@@ -72,9 +82,9 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 
 - DELETE (método delete) `/candidaturas-negras/participacao?movimentoSocial=unidefined` - remoção de candidaturas que não são de movimento social
 
-## **Entregas**
+## **Contribuindo com o projeto**
 
-- [X]  [Documentação do projeto (objetivo, tecnologias, aprendizados, instruções para utilização da API, informações sobre as rotas) - readme no Github](https://github.com/priscilaestevao/pretitudes-project-reprograma/blob/main/README.md)
+
 
 - [X]  [Link do Github contendo o código do projeto](https://github.com/priscilaestevao/pretitudes-project-reprograma)
 
