@@ -28,11 +28,11 @@ Também está sendo usada como fonte de complemento de dados o site do [TSE](htt
 ## **Funcionalidades**
 - [X] Cadastro de candidaturas negras
 - [X] Lista de todas as candidaturas negras cadastradas
+- [X] Lista de todos os movimentos sociais das candidaturas negras cadastradas
 - [X] Lista de candidaturas negras por cidade da Região Metropolitana do Recife
-- [ ] Lista de candidaturas negras por movimento
 - [ ] Lista de candidaturas negras eleitas em 2020 por cargo representativo
 - [X] Atualização de cadastro de candidaturas
-- [X] Remoção de candidaturas que não façam parte de movimentos populares
+- [X] Remoção de candidaturas que não façam parte de movimentos sociais
 
 ## **Tecnologias, dependências e bibliotecas**
 
@@ -58,9 +58,9 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 
 - READ (método get) `/candidaturas-negras` - lista de todas as candidaturas negras de 2020;
 
-- READ (método get) `/candidaturas-negras/?cidade=<nome-da-cidade>` - candidaturas negras por cidade;
+- READ (método get) `/candidaturas-negras/lista-movimentos` - lista de todos os movimentos populares;
 
-- READ (método get) `/candidaturas-negras/?movimentos=<nome-movimento>` - candidaturas negras por movimento;
+- READ (método get) `/candidaturas-negras/cidade/<nome-da-cidade>` - candidaturas negras por cidade;
 
 - READ (método get) `/candidaturas-negras/eleitas` - candidaturas negras eleitas em 2020 por cargo representativo;
 
@@ -83,5 +83,7 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 [Como escrever um README.md sensacional no Github](https://dev.to/reginadiana/como-escrever-um-readme-md-sensacional-no-github-4509#o-que-%C3%A9-o-readme)
 
 [Inspiração: Pokemons API (autoria: @AnnaNee)](https://github.com/AnnaNee/pokemons-api)
+
+[Tribunal Superior Eleitoral](https://www.tse.jus.br/)
 
 [Votos Antirracistas](https://votosantirracistas2020.com.br/)
