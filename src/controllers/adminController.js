@@ -27,30 +27,25 @@ const registerNewAdmin = (req, res) => {
   const token = auth(req, res);
   jwt.verify(token, SECRET, (err) => {
     if (err) {
-      return res.status(403).send("Invalid token!");
+      return res.status(403).send("Invalid token!")
     }
-    adminModel.findOne({ email: req.body.email }, (email) => {
-      if (email) {
-        res.status(409).send("Administrator already registered. Go to login!");
+    const encryptedPassword = bcrypt.hashSync(req.body.password, 10);
+    req.body.password = encryptedPassword;
+    const newAdmin = new adminModel(req.body);
+    newAdmin.save((err) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
       }
-      const encryptedPassword = bcrypt.hashSync(req.body.password, 10);
-      req.body.password = encryptedPassword;
-      const newAdmin = new adminModel(req.body);
-      newAdmin.save((err) => {
-        if (err) {
-          return res.status(424).send({ message: err.message });
-        }
-        res.status(201).send({
-          message: "Administrator successfully registered!",
-          administrator: newAdmin,
-        });
+      res.status(201).send({
+        message: "Administrator successfully registered!",
+        administrator: newAdmin,
       });
     });
   });
 };
 
 const login = (req, res) => {
-  adminModel.findOne({ email: req.body.email }, (err, administrator) => {
+  adminModel.findOne({ email: req.body.email } , (err, administrator) => {
     if (!administrator) {
       return res.status(404).send(`No administrator registered with email ${req.body.email}.`);
     }
@@ -66,7 +61,9 @@ const login = (req, res) => {
   });
 };
 
-const updateAdministrator = (req, res) => {};
+const updateAdministrator = (req, res) => {
+
+};
 
 const deleteAdministrator = (req, res) => {};
 
