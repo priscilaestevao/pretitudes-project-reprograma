@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const candidatesSchema = new mongoose.Schema(
   {
-    _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
+    _id: { type: mongoose.Schema.Types.ObjectId, auto: true, required: true },
     nomeTRE: { type: String, required: true },
     nomeSocial: { type: String, required: true },
     dataNascimento: { type: String, required: true },
