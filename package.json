@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/priscilaestevao/pretitude-project-reprograma.git"
+    "url": "git+https://github.com/priscilaestevao/pretitudes-project-reprograma.git"
   },
   "keywords": [
     "javascript",
@@ -22,9 +22,9 @@
   "author": "priscilaestevao",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/priscilaestevao/pretitudes/issues"
+    "url": "https://github.com/priscilaestevao/pretitudes-project-reprograma/issues"
   },
-  "homepage": "https://github.com/priscilaestevao/pretitudes#readme",
+  "homepage": "https://github.com/priscilaestevao/pretitudes-project-reprograma#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "dotenv-safe": "^8.2.0",
