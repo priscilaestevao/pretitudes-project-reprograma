@@ -6,7 +6,7 @@ router.get("/", controller.allCandidates);
 router.get("/lista-movimentos", controller.allPopularMovements);
 router.get("/eleitas2020", controller.electedCandidates);
 router.get("/:id", controller.candidateById);
-router.get("/cidade/:cidade", controller.candidatesByCity);
+router.get("/cidade/:city", controller.candidatesByCity);
 router.post("/", controller.registerNewCandidate);
 router.put("/:id", controller.updateRegistration);
 router.delete("/participacao", controller.removeCandidateByEmptyPopularMovement);

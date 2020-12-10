@@ -17,7 +17,7 @@ const allCandidates = (req, res) => {
 };
 
 const allPopularMovements = (req, res) => {
-  candidatesModel.find().distinct("movimentoSocial", (err, movementList) => {
+  candidatesModel.find().distinct("socialMovement", (err, movementList) => {
     if (err) {
       return res.status(424).send({ message: err.message });
     }
@@ -38,10 +38,10 @@ const candidateById = (req, res) => {
 };
 
 const candidatesByCity = (req, res) => {
-  const city = req.params.cidade;
+  const city = req.params.city;
   candidatesModel.find(
-    { cidade: city },
-    { nomeSocial: 1, email: 1, movimentoSocial: 1, partido: 1, _id: 0 },
+    { city: city },
+    { socialName: 1, email: 1, socialMovement: 1, party: 1, _id: 0 },
     (err, candidates) => {
       if (err) {
         return res.status(424).send({ message: err.message });
@@ -55,8 +55,8 @@ const candidatesByCity = (req, res) => {
 
 const electedCandidates = (req, res) => {
   candidatesModel.find(
-    { eleita: true },
-    { nomeSocial: 1, cidade: 1, tipoCandidatura: 1, partido: 1, _id: 0 },
+    { elected: true },
+    { socialName: 1, city: 1, candidateType: 1, party: 1, _id: 0 },
     (err, candidates) => {
       if (err) {
         return res.status(424).send({ message: err.message });
@@ -81,7 +81,7 @@ const registerNewCandidate = (req, res) => {
       }
       res.status(201).send({
         message: "Successfully registered!",
-        candidate: newCandidate,
+        id: newCandidate.id,
       });
     });
   });
