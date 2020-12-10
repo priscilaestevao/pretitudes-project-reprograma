@@ -1,5 +1,9 @@
+require("dotenv-safe").config();
 const { connect } = require("../models/repository");
 const candidatesModel = require("../models/black-candidates");
+const jwt = require("jsonwebtoken");
+const SECRET = process.env.SECRET;
+const { auth } = require("./authentication");
 
 connect();
 
@@ -64,41 +68,59 @@ const electedCandidates = (req, res) => {
   );
 };
 
-const createCandidate = (req, res) => {
-  const newCandidate = new candidatesModel(req.body);
-  newCandidate.save((err) => {
+const registerNewCandidate = (req, res) => {
+  const token = auth(req, res);
+  jwt.verify(token, SECRET, (err) => {
     if (err) {
-      return res.status(424).send({ message: err.message });
+      return res.status(403).send("Invalid token!");
     }
-    res.status(201).send({
-      message: "Successfully registered!",
-      candidate: newCandidate,
+    const newCandidate = new candidatesModel(req.body);
+    newCandidate.save((err) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
+      }
+      res.status(201).send({
+        message: "Successfully registered!",
+        candidate: newCandidate,
+      });
     });
   });
 };
 
 const updateRegistration = (req, res) => {
-  const id = req.params.id;
-  const updateCandidate = req.body;
-  candidatesModel.findByIdAndUpdate(id, updateCandidate, (err, candidate) => {
+  const token = auth(req, res);
+  jwt.verify(token, SECRET, (err) => {
     if (err) {
-      return res.status(424).send({ message: err.message });
-    } else if (candidate) {
-      return res.status(200).send("Updated successfully!");
+      return res.status(403).send("Invalid token!");
     }
-    res.status(404).send("Register not found!");
+    const id = req.params.id;
+    const updateCandidate = req.body;
+    candidatesModel.findByIdAndUpdate(id, updateCandidate, (err, candidate) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
+      } else if (candidate) {
+        return res.status(200).send("Updated successfully!");
+      }
+      res.status(404).send("Register not found!");
+    });
   });
 };
 
 const removeCandidateByEmptyPopularMovement = (req, res) => {
-  const params = req.query;
-  candidatesModel.deleteMany(params, (err, popularMovement) => {
+  const token = auth(req, res);
+  jwt.verify(token, SECRET, (err) => {
     if (err) {
-      return res.status(424).send({ message: err.message });
-    } else if (popularMovement) {
-      return res.status(200).send("Successfully removed!");
+      return res.status(403).send("Invalid token!");
     }
-    res.status(404).send("Register not found!");
+    const params = req.query;
+    candidatesModel.deleteMany(params, (err, popularMovement) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
+      } else if (popularMovement) {
+        return res.status(200).send("Successfully removed!");
+      }
+      res.status(404).send("Register not found!");
+    });
   });
 };
 
@@ -108,7 +130,7 @@ module.exports = {
   candidateById,
   candidatesByCity,
   electedCandidates,
-  createCandidate,
+  registerNewCandidate,
   updateRegistration,
   removeCandidateByEmptyPopularMovement,
 };
