@@ -27,7 +27,7 @@ const registerNewAdmin = (req, res) => {
   const token = auth(req, res);
   jwt.verify(token, SECRET, (err) => {
     if (err) {
-      return res.status(403).send("Invalid token!")
+      return res.status(403).send("Invalid token!");
     }
     const encryptedPassword = bcrypt.hashSync(req.body.password, 10);
     req.body.password = encryptedPassword;
@@ -62,7 +62,22 @@ const login = (req, res) => {
 };
 
 const updateAdministrator = (req, res) => {
-
+  const token = auth(req, res);
+  jwt.verify(token, SECRET, (err) => {
+    if (err) {
+      return res.status(403).send("Invalid token!");
+    }
+    const id = req.params.id;
+    const updateAdmin = req.body;
+    adminModel.findByIdAndUpdate(id, updateAdmin, (err, admin) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
+      } else if (admin) {
+        return res.status(200).send("Administrator update successfully!");
+      }
+      res.status(404).send("Administrator not found!");
+    });
+  });
 };
 
 const deleteAdministrator = (req, res) => {};
