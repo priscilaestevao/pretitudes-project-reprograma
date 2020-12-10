@@ -44,7 +44,7 @@ const registerNewAdmin = (req, res) => {
   });
 };
 
-const login = (req, res) => {
+const loginAdmin = (req, res) => {
   adminModel.findOne({ email: req.body.email } , (err, administrator) => {
     if (!administrator) {
       return res.status(404).send(`No administrator registered with email ${req.body.email}.`);
@@ -61,7 +61,7 @@ const login = (req, res) => {
   });
 };
 
-const updateAdministrator = (req, res) => {
+const updateAdmin = (req, res) => {
   const token = auth(req, res);
   jwt.verify(token, SECRET, (err) => {
     if (err) {
@@ -80,12 +80,28 @@ const updateAdministrator = (req, res) => {
   });
 };
 
-const deleteAdministrator = (req, res) => {};
+const removeAdminByEmail = (req, res) => {
+  const token = auth(req, res);
+  jwt.verify(token, SECRET, (err) => {
+    if (err) {
+      return res.status(403).send("Invalid token!");
+    }
+    const params = req.query;
+    adminModel.deleteOne(params, (err, email) => {
+      if (err) {
+        return res.status(424).send({ message: err.message });
+      } else if (email) {
+        return res.status(200).send("Administrator successfully removed!");
+      }
+      res.status(404).send("Administrator not found!");
+    });
+  });
+};
 
 module.exports = {
   allAdmin,
   registerNewAdmin,
-  login,
-  updateAdministrator,
-  deleteAdministrator,
+  loginAdmin,
+  updateAdmin,
+  removeAdminByEmail,
 };
