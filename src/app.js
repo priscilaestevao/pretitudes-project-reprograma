@@ -8,7 +8,7 @@ mongoose.connect(`${process.env.MONGODB_URL}`, {
   useUnifiedTopology: true,
 });
 
-let db = mongoose.connection; 
+let db = mongoose.connection;
 db.on("error", console.log.bind(console, "Connection error!"));
 db.once("open", () => {
   console.log("Sucessfully connected!");
@@ -16,6 +16,7 @@ db.once("open", () => {
 
 const index = require("./routes/index");
 const candidates = require("./routes/candidatesRoute");
+const adm = require("./routes/projectAdmRoute");
 
 app.use(express.json());
 
@@ -30,5 +31,6 @@ app.use((req, res, next) => {
 
 app.use("/", index);
 app.use("/candidaturas-negras", candidates);
+app.use("/adm", adm);
 
 module.exports = app;
