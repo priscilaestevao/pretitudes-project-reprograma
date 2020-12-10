@@ -1,22 +1,8 @@
-require("dotenv-safe").config();
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
-
-mongoose.connect(`${process.env.MONGODB_URL}`, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-let db = mongoose.connection;
-db.on("error", console.log.bind(console, "Connection error!"));
-db.once("open", () => {
-  console.log("Sucessfully connected!");
-});
-
 const index = require("./routes/index");
 const candidates = require("./routes/candidatesRoute");
-const adm = require("./routes/projectAdmRoute");
+const admin = require("./routes/adminRoute");
 
 app.use(express.json());
 
@@ -31,6 +17,6 @@ app.use((req, res, next) => {
 
 app.use("/", index);
 app.use("/candidaturas-negras", candidates);
-app.use("/adm", adm);
+app.use("/admin", admin);
 
 module.exports = app;

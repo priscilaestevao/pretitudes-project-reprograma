@@ -1,53 +1,48 @@
 require("dotenv-safe").config();
-const projectAdmModel = require("../models/projectAdm");
+const { connect } = require("../models/repository");
+const adminModel = require("../models/admin");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const SECRET = process.env.SECRET;
+const { auth } = require("./authentication");
 
-const auth = (req, res) => {
-  const authHeader = req.get("Authorization");
-  if (!authHeader) {
-    return res.status(401).send("You need to include headers.");
-  }
-  const token = authHeader.split(" ")[1];
-  return token;
-};
+connect();
 
-const allAdmnistrators = (req, res) => {
+const allAdmin = (req, res) => {
   const token = auth(req, res);
   jwt.verify(token, SECRET, (err) => {
     if (err) {
       return res.status(403).send("Invalid token!");
     }
-    projectAdmModel.find((err, administrators) => {
-      if (err) {
-        return res.status(424).send({ message: err.message });
-      }
-      res.status(200).send(administrators);
-    });
+  });
+  adminModel.find((err, administrators) => {
+    if (err) {
+      return res.status(424).send({ message: err.message });
+    }
+    res.status(200).send(administrators);
   });
 };
 
-const createAdministrator = (req, res) => {
+const registerNewAdmin = (req, res) => {
   const token = auth(req, res);
   jwt.verify(token, SECRET, (err) => {
     if (err) {
       return res.status(403).send("Invalid token!");
     }
-    projectAdmModel.findOne({ email: req.body.email }, (email) => {
+    adminModel.findOne({ email: req.body.email }, (email) => {
       if (email) {
         res.status(409).send("Administrator already registered. Go to login!");
       }
       const encryptedPassword = bcrypt.hashSync(req.body.password, 10);
       req.body.password = encryptedPassword;
-      const newAdm = new projectAdmModel(req.body);
-      newAdm.save((err) => {
+      const newAdmin = new adminModel(req.body);
+      newAdmin.save((err) => {
         if (err) {
           return res.status(424).send({ message: err.message });
         }
         res.status(201).send({
           message: "Administrator successfully registered!",
-          administrator: newAdm,
+          administrator: newAdmin,
         });
       });
     });
@@ -55,7 +50,7 @@ const createAdministrator = (req, res) => {
 };
 
 const login = (req, res) => {
-  projectAdmModel.findOne({ email: req.body.email }, (err, administrator) => {
+  adminModel.findOne({ email: req.body.email }, (err, administrator) => {
     if (!administrator) {
       return res.status(404).send(`No administrator registered with email ${req.body.email}.`);
     }
@@ -76,8 +71,8 @@ const updateAdministrator = (req, res) => {};
 const deleteAdministrator = (req, res) => {};
 
 module.exports = {
-  allAdmnistrators,
-  createAdministrator,
+  allAdmin,
+  registerNewAdmin,
   login,
   updateAdministrator,
   deleteAdministrator,

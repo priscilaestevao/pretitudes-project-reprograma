@@ -1,4 +1,7 @@
+const { connect } = require("../models/repository");
 const candidatesModel = require("../models/black-candidates");
+
+connect();
 
 const allCandidates = (req, res) => {
   candidatesModel.find((err, candidates) => {
