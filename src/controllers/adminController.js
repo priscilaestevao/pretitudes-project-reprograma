@@ -29,8 +29,8 @@ const registerNewAdmin = (req, res) => {
     if (err) {
       return res.status(403).send("Invalid token!");
     }
-    const encryptedPassword = bcrypt.hashSync(req.body.password, 10);
-    req.body.password = encryptedPassword;
+    const encryptedPassword = req.body;
+    encryptedPassword.password = bcrypt.hashSync(req.body.password, 10);
     const newAdmin = new adminModel(req.body);
     newAdmin.save((err) => {
       if (err) {
@@ -38,7 +38,7 @@ const registerNewAdmin = (req, res) => {
       }
       res.status(201).send({
         message: "Administrator successfully registered!",
-        administrator: newAdmin,
+        admin_id: newAdmin.id,
       });
     });
   });
@@ -68,8 +68,9 @@ const updateAdmin = (req, res) => {
       return res.status(403).send("Invalid token!");
     }
     const id = req.params.id;
-    const updateAdmin = req.body;
-    adminModel.findByIdAndUpdate(id, updateAdmin, (err, admin) => {
+    const updateInformation = req.body;
+    updateInformation.password = bcrypt.hashSync(req.body.password, 10);
+    adminModel.findByIdAndUpdate(id, updateInformation, (err, admin) => {
       if (err) {
         return res.status(424).send({ message: err.message });
       } else if (admin) {
