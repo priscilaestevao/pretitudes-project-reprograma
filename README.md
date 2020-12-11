@@ -56,17 +56,17 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 
 ## **Tecnologias, dependências e bibliotecas**
 
-:heavy_check_mark: NodeJS
+:heavy_check_mark: [NodeJS](https://nodejs.org/pt-br/)
 
-:heavy_check_mark: MongoDB
+:heavy_check_mark: [MongoDB](https://www.mongodb.com/)
 
-:heavy_check_mark: Git/GitHub
+:heavy_check_mark: [Git](https://git-scm.com/) e [GitHub](https://github.com/)
 
-:heavy_check_mark: ExpressJS
+:heavy_check_mark: [ExpressJS](https://expressjs.com/pt-br/)
 
-:heavy_check_mark: Mongoose
+:heavy_check_mark: [MongooseJS](https://mongoosejs.com/)
 
-:heavy_check_mark: Nodemon
+:heavy_check_mark: [Nodemon](https://www.npmjs.com/package/nodemon)
 
 ## **Instruções de instalação e contribuições no projeto**
 
