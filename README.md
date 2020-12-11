@@ -13,7 +13,7 @@
 
 > Banco de dados de candidaturas negras que concorreram a eleição municipal 2020 na Região Metropolitana do Recife (PE).
 
-> Status: **Em Desenvolvimento** :warning:
+> Status: **Concluído** :heavy_check_mark:
 </br>
 </br>
 
