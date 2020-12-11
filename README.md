@@ -45,14 +45,15 @@ Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https:/
 Também é usado como complemento de dados o site do [Tribunal Superior Eleitoral - TSE](https://divulgacandcontas.tse.jus.br/divulga/#/).
 
 ## **Funcionalidades**
-- [X] Cadastro de candidaturas negras (requer autenticação)
+
+- [X] Login de pessoa administradora da API (cadastro, atualização e remoção de administradores)
+- [X] Cadastro de candidaturas negras
 - [X] Lista de todas as candidaturas negras cadastradas
 - [X] Lista de todos os movimentos sociais das candidaturas negras cadastradas
 - [X] Lista de candidaturas negras por cidade da Região Metropolitana do Recife
 - [X] Lista de candidaturas negras eleitas em 2020
-- [X] Atualização de cadastro de candidaturas (requer autenticação)
-- [X] Remoção de candidaturas que não façam parte de movimentos sociais (requer autenticação)
-- [X] Login de administrador da API (cadastro, atualização e remoção de administradores)
+- [X] Atualização de cadastro de candidaturas
+- [X] Remoção de candidaturas que não façam parte de movimentos sociais
 
 ## **Tecnologias, dependências e bibliotecas**
 
