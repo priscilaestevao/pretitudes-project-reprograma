@@ -88,23 +88,23 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 
 A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser acessadas é necessário usar `http://localhost:8080/` antes dos endpoints de requisição.
 
-### _Manipulando registros como usuário comum_
+### _Manipulando registros como pessoa usuária_
 
 | Feature | Método | Rota |
 |---------|--------|------|
-| Cadastro candidaturas negras | POST | `/candidaturas-negras` |
 | Lista de todas as candidaturas negras de 2020 | GET | `/candidaturas-negras` |
 | Lista de todos os movimentos populares | GET | `/candidaturas-negras/lista-movimentos` |
 | Filtro de candidaturas negras por cidade | GET | `/candidaturas-negras/cidade/<nome-da-cidade>` |
 | Lista de candidaturas negras eleitas em 2020 | GET | `/candidaturas-negras/eleitas2020` |
-| Atualização de cadastro de candidaturas por id (autenticada) | PUT | `/candidaturas-negras/:_id` |
-| Remoção de candidaturas que não são de movimentos sociais (autenticada) | DELETE | `/candidaturas-negras/participacao?movimentoSocial=unidefined` |
 
 ### _Manipulando registros como pessoa administradora_
 
 | Feature | Método | Rota |
 |---------|--------|------|
 | Login de pessoa administradora | POST | `/admin/login` |
+| Cadastro candidaturas negras (autenticada) | POST | `/candidaturas-negras` |
+| Atualização de cadastro de candidaturas por id (autenticada) | PUT | `/candidaturas-negras/:_id` |
+| Remoção de candidaturas que não são de movimentos sociais (autenticada) | DELETE | `/candidaturas-negras/participacao?movimentoSocial=unidefined` |
 | Cadastro de pessoa administradora | POST | `/admin/` |
 | Lista de todas as pessoas administradoras | GET | `/admin` |
 | Atualização de cadastro de pessoa administradora por id | PUT | `/admin/:id` |
