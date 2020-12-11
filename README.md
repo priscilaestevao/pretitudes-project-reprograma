@@ -97,14 +97,14 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 | Filtro de candidaturas negras por cidade | GET | `/candidaturas-negras/cidade/<nome-da-cidade>` |
 | Lista de candidaturas negras eleitas em 2020 | GET | `/candidaturas-negras/eleitas2020` |
 
-### _Manipulando registros como pessoa administradora_
+### _Manipulando registros como pessoa administradora (requer token de autenticação)_
 
 | Feature | Método | Rota |
 |---------|--------|------|
 | Login de pessoa administradora | POST | `/admin/login` |
-| Cadastro candidaturas negras (autenticada) | POST | `/candidaturas-negras` |
-| Atualização de cadastro de candidaturas por id (autenticada) | PUT | `/candidaturas-negras/:_id` |
-| Remoção de candidaturas que não são de movimentos sociais (autenticada) | DELETE | `/candidaturas-negras/participacao?movimentoSocial=unidefined` |
+| Cadastro de candidaturas negras | POST | `/candidaturas-negras` |
+| Atualização de cadastro de candidaturas por id | PUT | `/candidaturas-negras/:_id` |
+| Remoção de candidaturas que não são de movimentos sociais | DELETE | `/candidaturas-negras/participacao?movimentoSocial=unidefined` |
 | Cadastro de pessoa administradora | POST | `/admin/` |
 | Lista de todas as pessoas administradoras | GET | `/admin` |
 | Atualização de cadastro de pessoa administradora por id | PUT | `/admin/:id` |
