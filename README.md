@@ -1,3 +1,11 @@
+[![Deploy on heroku](https://img.shields.io/badge/deploy-heroku.com-blueviolet)](https://pretitudes-project-reprograma.herokuapp.com/)
+![badge node version](https://img.shields.io/badge/node-v12.18.3-brightgreen)
+![badge npm version](https://img.shields.io/badge/npm-6.14.6-brightgreen)
+![badge issues](https://img.shields.io/github/issues/priscilaestevao/pretitudes-project-reprograma)
+![badge fork](https://img.shields.io/github/forks/priscilaestevao/pretitudes-project-reprograma)
+![badge stars](https://img.shields.io/github/stars/priscilaestevao/pretitudes-project-reprograma)
+![badge licence](https://img.shields.io/github/license/priscilaestevao/pretitudes-project-reprograma)
+
 <h1 align="center">
   <img src="public/images/pretitudes.png" alt="três pessoas negras segurando uma faixa com o nome Pretitudes" width="500">
 <p align="center">Pretitudes - Ocupação preta na política<p>
@@ -6,6 +14,22 @@
 > Banco de dados de candidaturas negras que concorreram a eleição municipal 2020 na Região Metropolitana do Recife (PE).
 
 > Status: **Em Desenvolvimento** :warning:
+</br>
+</br>
+
+## **Sumário**
+
+1. [Apresentação](#Apresentação)
+2. [Contextualização](#Contextualização)
+3. [Fonte de Dados](#Fonte-de-dados)
+4. [Funcionalidades](#Funcionalidades)
+5. [Tecnologias, dependências e bibliotecas](#Tecnologias,-dependencias-e-bibliotecas)
+6. [Instruções de instalação e contribuições no projeto](#Instrucoes-de-instalação-e-contribuições-no-projeto)
+7. [Rotas HTTP](#Rotas-HTTP)
+8. [Referências](#Referências)
+
+</br>
+</br>
 
 ## **Apresentação**
 
@@ -13,11 +37,17 @@ O "Pretitudes" é o projeto de conclusão do bootcamp de Back-end da [{reprogram
 
 A ideia é que ela possa ser aproveitada por um programa de formação política e qualificação, quem sabe até de investimento, potencializando o movimento negro no próximo pleito eleitoral em 2024.
 
+</br>
+</br>
+
 ## **Contextualização**
 
 <img src="public/images/voto-em-negra.jpeg" alt="mulher com um adesivo colado na mão escrito voto em negra" width ="250" align="right" padding="150"/>
 
 A ausência de representação negra nos parlamentos é um problema há muito denunciado pelos movimentos negros brasileiros. Se no Brasil mais de 56% das pessoas se declaram negras, os dados de composição racial nas casas legislativas espalhadas pelo país demonstram o tamanho do abismo. Segundo dados do TSE, negros somam 24,4% dos deputados federais e 28,9% dos deputados estaduais eleitos em 2018 e, dos vereadores eleitos em 2016, somam 42,1% de pretos e pardos. (Fonte: Votos Antirarcistas, 2020)
+
+</br>
+</br>
 
 ## **Fonte dos dados**
 
@@ -25,14 +55,20 @@ Essa aplicação é desenvolvida em parceria com o [#VotosAntirracistas](https:/
 
 Também é usado como complemento de dados o site do [Tribunal Superior Eleitoral - TSE](https://divulgacandcontas.tse.jus.br/divulga/#/).
 
+</br>
+</br>
+
 ## **Funcionalidades**
-- [X] Cadastro de candidaturas negras
+- [X] Cadastro de candidaturas negras (requer autenticação)
 - [X] Lista de todas as candidaturas negras cadastradas
 - [X] Lista de todos os movimentos sociais das candidaturas negras cadastradas
 - [X] Lista de candidaturas negras por cidade da Região Metropolitana do Recife
 - [X] Lista de candidaturas negras eleitas em 2020
-- [X] Atualização de cadastro de candidaturas
-- [X] Remoção de candidaturas que não façam parte de movimentos sociais
+- [X] Atualização de cadastro de candidaturas (requer autenticação)
+- [X] Remoção de candidaturas que não façam parte de movimentos sociais (requer autenticação)
+- [X] Login de administrador da API (cadastro, atualização e remoção de administradores)
+</br>
+</br>
 
 ## **Tecnologias, dependências e bibliotecas**
 
@@ -47,6 +83,8 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 :heavy_check_mark: Mongoose
 
 :heavy_check_mark: Nodemon
+</br>
+</br>
 
 ## **Instruções de instalação e contribuições no projeto**
 
@@ -63,24 +101,40 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 - Para subir o projeto no seu GitHub, basta executar o comando `git push origin feature/<sua_branch>`;
 
 - E finalize criando um novo _Pull Request_ com as contribuições para o projeto original.
+</br>
+</br>
 
-## **Rotas HTTP**
+## **Features e rotas**
 
 A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser acessadas é necessário usar `http://localhost:8080/` antes dos endpoints de requisição.
+</br>
+</br>
 
-- CREAT (método post) `/candidaturas-negras` - adicionar candidaturas negras;
+### _Manilando os registros como usuário comum_
 
-- READ (método get) `/candidaturas-negras` - lista de todas as candidaturas negras de 2020;
+| Feature | Método | Rota |
+|---------|--------|------|
+| Cadastro candidaturas negras | POST | `/candidaturas-negras` |
+| Lista de todas as candidaturas negras de 2020 | GET | `/candidaturas-negras` |
+| Lista de todos os movimentos populares | GET | `/candidaturas-negras/lista-movimentos` |
+| Filtro de candidaturas negras por cidade | GET | `/candidaturas-negras/cidade/<nome-da-cidade>` |
+| Lista de candidaturas negras eleitas em 2020 | GET | `/candidaturas-negras/eleitas2020` |
+| Atualização de cadastro de candidaturas por id (autenticada) | PUT | `/candidaturas-negras/:_id` |
+| Remoção de candidaturas que não são de movimentos sociais (autenticada) | DELETE | `/candidaturas-negras/participacao?movimentoSocial=unidefined` |
+</br>
 
-- READ (método get) `/candidaturas-negras/lista-movimentos` - lista de todos os movimentos populares;
+### _Manilando os registros como pessoa administradora_
 
-- READ (método get) `/candidaturas-negras/cidade/<nome-da-cidade>` - candidaturas negras por cidade;
+| Feature                                                 | Método | Rota                                                     |
+|---------------------------------------------------------|--------|----------------------------------------------------------|
+| Login de pessoa administradora                          | POST   | `/admin/login`                                           |
+| Cadastro de pessoa administradora                       | POST   | `/admin/`                                                |
+| Lista de todas as pessoas administradoras               | GET    | `/admin`                                                 |
+| Atualização de cadastro de pessoa administradora por id | PUT    | `/admin/:id`                                             |
+| Remoção de pessoa administradora por email              | DELETE | `/admin?email=<email_da_pessoa_administradora_castrada>` |
 
-- READ (método get) `/candidaturas-negras/eleitas2020` - candidaturas negras eleitas em 2020 por cargo representativo;
-
-- UPDATE (método put) `/candidaturas-negras/:_id` - atualização de cadastro de candidaturas por id
-
-- DELETE (método delete) `/candidaturas-negras/participacao?movimentoSocial=unidefined` - remoção de candidaturas que não são de movimento social
+</br>
+</br>
 
 ## **Referências**
 
