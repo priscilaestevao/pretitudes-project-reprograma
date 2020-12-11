@@ -17,14 +17,14 @@
 
 ## **Sumário**
 
-1. [Apresentação](#Apresentação)
-2. [Contextualização](#Contextualização)
-3. [Fonte de Dados](#Fonte-de-dados)
-4. [Funcionalidades](#Funcionalidades)
-5. [Tecnologias, dependências e bibliotecas](#Tecnologias,-dependencias-e-bibliotecas)
-6. [Instruções de instalação e contribuições no projeto](#Instrucoes-de-instalação-e-contribuições-no-projeto)
-7. [Rotas HTTP](#Rotas-HTTP)
-8. [Referências](#Referências)
+- [Apresentação](#apresentação)
+- [Contextualização](#contextualização)
+- [Fonte dos dados](#fonte-dos-dados)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias, dependências e bibliotecas](#tecnologias,-dependências-e-bibliotecas)
+- [Instruções para instalação e contribuições no projeto](#instruções-para-instalação-e-contribuições-no-projeto)
+- [Features e rotas](#features-e-rotas)
+- [Referências](#referências)
 
 ## **Apresentação**
 
@@ -69,7 +69,7 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 
 :heavy_check_mark: [Nodemon](https://www.npmjs.com/package/nodemon)
 
-## **Instruções de instalação e contribuições no projeto**
+## **Instruções para instalação e contribuições no projeto**
 
 - Faça um `fork` do projeto através do link (<https://github.com/priscilaestevao/pretitudes-project-reprograma/fork>);
 
