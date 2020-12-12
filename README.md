@@ -1,10 +1,11 @@
 <p align="center">
   <a>
-  <img alt="node version" src="https://img.shields.io/badge/node-v12.18.3-brightgreen">
-  <img alt="npm version" src="https://img.shields.io/badge/npm-6.14.6-brightgreen">
-  <img alt="github repo size" src="https://img.shields.io/github/repo-size/priscilaestevao/pretitudes-project-reprograma">
-  <img alt="github last commit" src="https://img.shields.io/github/last-commit/priscilaestevao/pretitudes-project-reprograma">
-  <img alt="github license" src="https://img.shields.io/github/license/priscilaestevao/pretitudes-project-reprograma?logo=mit">
+  <img alt="Node version" src="https://img.shields.io/badge/node-v12.18.3-brightgreen">
+  <img alt="npm Version" src="https://img.shields.io/badge/npm-6.14.6-brightgreen">
+  <img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/priscilaestevao/pretitudes-project-reprograma">
+  <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/priscilaestevao/pretitudes-project-reprograma">
+  <img alt="GitHub License" src="https://img.shields.io/github/license/priscilaestevao/pretitudes-project-reprograma?logo=mit">
+  <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/priscilaestevao/pretitudes-project-reprograma">
   <a href="https://pretitudes-project-reprograma.herokuapp.com/"><img alt="deploy on heroku" src="https://img.shields.io/badge/deploy-heroku.com-blueviolet">
   </a>
 </p>
@@ -90,6 +91,10 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 
 - Instale as dependências necessárias à execução da API através do comando `npm install`;
 
+- No raiz do projeto, renomeie `.env.example` para `.env` e adicione os valores das variáveis `PORT` (porta sugerida `8080`), `MONGODB_URL` (string de conexão com o banco de dados) e `SECRET` (chave RSA). Elas são necessárias para a execução da API em sua máquina
+
+- Para executar a API, utilize o comando `npm start` no seu terminal;
+
 - Após suas contribuições no projeto, realize o _commit_ com o comando `git commit -m 'sua mensagem'`;
 
 - Para subir o projeto no seu GitHub, basta executar o comando `git push origin feature/<sua_branch>`;
@@ -98,7 +103,7 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 
 ## **Features e rotas**
 
-A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser acessadas é necessário usar `http://localhost:8080/` antes dos endpoints de requisição.
+Esta API está sendo escutada na `porta 8080` e para que todas as rotas possam ser acessadas localmente é necessário usar `http://localhost:8080/` antes dos endpoints de requisição.
 
 ### _Manipulando registros como pessoa usuária_
 
@@ -133,3 +138,10 @@ A API está sendo escutada na `porta 8080` e para que todas as rotas possam ser 
 [Tribunal Superior Eleitoral](https://www.tse.jus.br/)
 
 [Votos Antirracistas](https://votosantirracistas2020.com.br/)
+
+<hr>
+
+Criado com :black_heart: por **Priscila Estevão**
+
+[![Linkedin Badge](https://img.shields.io/badge/-Priscila%20Estevão-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/priestevao/)
+
