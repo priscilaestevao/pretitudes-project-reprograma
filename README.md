@@ -137,7 +137,7 @@ Esta API está sendo escutada na `porta 8080` e para que todas as rotas possam s
 
 <hr>
 
-Criado com :black_heart: por **Priscila Estevão**
+Criado com :black_heart: por **Priscila Estevão** e o apoio das professoras, monitoras, orientação pedagógica e minhas queridas companheiras de turma. Sou só gratidão!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Priscila%20Estevão-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/priestevao/)
 
