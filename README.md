@@ -65,15 +65,17 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 
 :heavy_check_mark: [Gerenciador de pacotes npm 6.14.6](https://www.npmjs.com/)
 
-:heavy_check_mark: [ExpressJS 4.17.1](https://expressjs.com/pt-br/)
+:heavy_check_mark: [express 4.17.1](https://expressjs.com/pt-br/)
 
-:heavy_check_mark: [MongooseJS 5.10.17](https://mongoosejs.com/)
+:heavy_check_mark: [mongoose 5.10.17](https://mongoosejs.com/)
 
-:heavy_check_mark: [Dotenv-safe 8.2.0](https://www.npmjs.com/package/dotenv-safe)
+:heavy_check_mark: [dotenv-safe 8.2.0](https://www.npmjs.com/package/dotenv-safe)
 
-:heavy_check_mark: [Bcripyt 5.0.0](https://www.npmjs.com/package/bcryptjs)
+:heavy_check_mark: [bcripyt 5.0.0](https://www.npmjs.com/package/bcryptjs)
 
-:heavy_check_mark: [Nodemon 2.0.6](https://www.npmjs.com/package/nodemon)
+:heavy_check_mark: [jsonwebtoken 8.5.1](https://www.npmjs.com/package/jsonwebtoken)
+
+:heavy_check_mark: [nodemon 2.0.6](https://www.npmjs.com/package/nodemon)
 
 ## **Instruções para instalação e contribuições no projeto**
 
