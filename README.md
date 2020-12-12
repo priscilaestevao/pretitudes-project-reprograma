@@ -21,7 +21,7 @@
 - [Contextualização](#contextualização)
 - [Fonte dos dados](#fonte-dos-dados)
 - [Funcionalidades](#funcionalidades)
-- [Tecnologias, dependências e bibliotecas](#tecnologias,-dependências-e-bibliotecas)
+- [Tecnologias, dependências e bibliotecas](#tecnologias-dependências-e-bibliotecas)
 - [Instruções para instalação e contribuições no projeto](#instruções-para-instalação-e-contribuições-no-projeto)
 - [Features e rotas](#features-e-rotas)
 - [Referências](#referências)
@@ -63,11 +63,17 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 
 :heavy_check_mark: [Git](https://git-scm.com/) e [GitHub](https://github.com/)
 
-:heavy_check_mark: [ExpressJS](https://expressjs.com/pt-br/)
+:heavy_check_mark: [Gerenciador de pacotes npm 6.14.6](https://www.npmjs.com/)
 
-:heavy_check_mark: [MongooseJS](https://mongoosejs.com/)
+:heavy_check_mark: [ExpressJS 4.17.1](https://expressjs.com/pt-br/)
 
-:heavy_check_mark: [Nodemon](https://www.npmjs.com/package/nodemon)
+:heavy_check_mark: [MongooseJS 5.10.17](https://mongoosejs.com/)
+
+:heavy_check_mark: [Dotenv-safe 8.2.0](https://www.npmjs.com/package/dotenv-safe)
+
+:heavy_check_mark: [Bcripyt 5.0.0](https://www.npmjs.com/package/bcryptjs)
+
+:heavy_check_mark: [Nodemon 2.0.6](https://www.npmjs.com/package/nodemon)
 
 ## **Instruções para instalação e contribuições no projeto**
 
