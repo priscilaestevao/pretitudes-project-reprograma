@@ -1,12 +1,10 @@
 <p align="center">
   <a>
-  <img alt="Node version" src="https://img.shields.io/badge/node-v12.18.3-brightgreen">
-  <img alt="npm Version" src="https://img.shields.io/badge/npm-6.14.6-brightgreen">
-  <img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/priscilaestevao/pretitudes-project-reprograma">
-  <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/priscilaestevao/pretitudes-project-reprograma">
-  <img alt="GitHub License" src="https://img.shields.io/github/license/priscilaestevao/pretitudes-project-reprograma?logo=mit">
-  <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/priscilaestevao/pretitudes-project-reprograma">
-  <a href="https://pretitudes-project-reprograma.herokuapp.com/"><img alt="deploy on heroku" src="https://img.shields.io/badge/deploy-heroku.com-blueviolet">
+    <a href="https://pretitudes-project-reprograma.herokuapp.com/"><img alt="deploy on heroku" src="https://img.shields.io/badge/deploy-heroku.com-blueviolet">
+    <img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/priscilaestevao/pretitudes-project-reprograma">
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/priscilaestevao/pretitudes-project-reprograma">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/priscilaestevao/pretitudes-project-reprograma?logo=mit">
+    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/priscilaestevao/pretitudes-project-reprograma">
   </a>
 </p>
 
@@ -59,27 +57,23 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 - [X] Atualização de cadastro de candidaturas
 - [X] Remoção de candidaturas que não façam parte de movimentos sociais
 
-## **Tecnologias, dependências e bibliotecas**
+## **Tecnologias, bibliotecas e dependências**
 
-:heavy_check_mark: [NodeJS](https://nodejs.org/pt-br/)
-
-:heavy_check_mark: [MongoDB](https://www.mongodb.com/)
-
-:heavy_check_mark: [Git](https://git-scm.com/) e [GitHub](https://github.com/)
-
-:heavy_check_mark: [Gerenciador de pacotes npm 6.14.6](https://www.npmjs.com/)
-
-:heavy_check_mark: [express 4.17.1](https://expressjs.com/pt-br/)
-
-:heavy_check_mark: [mongoose 5.10.17](https://mongoosejs.com/)
-
-:heavy_check_mark: [dotenv-safe 8.2.0](https://www.npmjs.com/package/dotenv-safe)
-
-:heavy_check_mark: [bcripyt 5.0.0](https://www.npmjs.com/package/bcryptjs)
-
-:heavy_check_mark: [jsonwebtoken 8.5.1](https://www.npmjs.com/package/jsonwebtoken)
-
-:heavy_check_mark: [nodemon 2.0.6](https://www.npmjs.com/package/nodemon)
+<p align="left">
+  <a>
+    <a href="https://git-scm.com/"><img alt="Git version" src="https://img.shields.io/badge/Git-2.28.0.windows.1-blue">
+    <a href="https://nodejs.org/pt-br/"><img alt="Node version" src="https://img.shields.io/badge/Node-v12.18.3-blue">
+    <a href="https://www.mongodb.com/cloud/atlas"><img alt="Node version" src="https://img.shields.io/badge/MongoDB-Atlas-blue">
+    <br/>
+    <a href="https://www.npmjs.com/"><img alt="npm version" src="https://img.shields.io/badge/npm-6.14.6-blue">
+    <a href="https://expressjs.com/pt-br/"><img alt="Express version" src="https://img.shields.io/badge/express-4.17.1-blue">
+    <a href="https://mongoosejs.com/"><img alt="Mongoose version" src="https://img.shields.io/badge/mongoose-5.10.17-blue">
+    <a href="https://www.npmjs.com/package/dotenv-safe"><img alt="Dotenv-safe version" src="https://img.shields.io/badge/dotenv-8.2.0-blue">
+    <a href="https://www.npmjs.com/package/bcryptjs"><img alt="Bcrypt version" src="https://img.shields.io/badge/bcrypt-5.0.0-blue">
+    <a href="https://www.npmjs.com/package/jsonwebtoken"><img alt="Jsonwebtoken version" src="https://img.shields.io/badge/jsonwebtoken-8.5.1-blue">
+    <a href="https://www.npmjs.com/package/nodemon"><img alt="Nodemon version" src="https://img.shields.io/badge/nodemon-2.0.6-blue">
+  </a> 
+</p>
 
 ## **Instruções para instalação e contribuições no projeto**
 
