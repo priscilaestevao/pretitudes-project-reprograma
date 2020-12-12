@@ -3,9 +3,8 @@
   <img alt="node version" src="https://img.shields.io/badge/node-v12.18.3-brightgreen">
   <img alt="npm version" src="https://img.shields.io/badge/npm-6.14.6-brightgreen">
   <img alt="github repo size" src="https://img.shields.io/github/repo-size/priscilaestevao/pretitudes-project-reprograma">
-  <img alt="github fork" src="https://img.shields.io/github/forks/priscilaestevao/pretitudes-project-reprograma">
   <img alt="github last commit" src="https://img.shields.io/github/last-commit/priscilaestevao/pretitudes-project-reprograma">
-  <img alt="github license" src="https://img.shields.io/github/license/priscilaestevao/pretitudes-project-reprograma">
+  <img alt="github license" src="https://img.shields.io/github/license/priscilaestevao/pretitudes-project-reprograma?logo=mit">
   <a href="https://pretitudes-project-reprograma.herokuapp.com/"><img alt="deploy on heroku" src="https://img.shields.io/badge/deploy-heroku.com-blueviolet">
   </a>
 </p>
