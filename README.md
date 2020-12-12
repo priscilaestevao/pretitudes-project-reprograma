@@ -1,10 +1,11 @@
 <p align="center">
   <a>
-    <a href="https://pretitudes-project-reprograma.herokuapp.com/"><img alt="deploy on heroku" src="https://img.shields.io/badge/deploy-heroku.com-blueviolet">
+    <a href="https://pretitudes-project-reprograma.herokuapp.com/"><img alt="Deploy on Heroku" src="https://img.shields.io/badge/deploy-heroku.com-blueviolet">
+    <a href="https://www.mongodb.com/cloud/atlas"><img alt="Database MongoDB" src="https://img.shields.io/badge/database-mongodb.com-green">
+    <a href="https://nodejs.org/pt-br/"><img alt="Node version" src="https://img.shields.io/badge/node-v12.18.3-blue">
     <img alt="GitHub Repo Size" src="https://img.shields.io/github/repo-size/priscilaestevao/pretitudes-project-reprograma">
     <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/priscilaestevao/pretitudes-project-reprograma">
     <img alt="GitHub License" src="https://img.shields.io/github/license/priscilaestevao/pretitudes-project-reprograma?logo=mit">
-    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/priscilaestevao/pretitudes-project-reprograma">
   </a>
 </p>
 
@@ -61,9 +62,10 @@ Também é usado como complemento de dados o site do [Tribunal Superior Eleitora
 
 <p align="left">
   <a>
-    <a href="https://git-scm.com/"><img alt="Git version" src="https://img.shields.io/badge/Git-2.28.0.windows.1-yellow">
-    <a href="https://nodejs.org/pt-br/"><img alt="Node version" src="https://img.shields.io/badge/Node-v12.18.3-yellow">
-    <a href="https://www.mongodb.com/cloud/atlas"><img alt="Node version" src="https://img.shields.io/badge/MongoDB-Atlas-yellow">
+    <a href="https://git-scm.com/"><img alt="Git version" src="https://img.shields.io/badge/Git/GitHub-yellow">
+    <a href="https://nodejs.org/pt-br/"><img alt="Node version" src="https://img.shields.io/badge/NodeJS-yellow">
+    <a href="https://www.mongodb.com/cloud/atlas"><img alt="Node version" src="https://img.shields.io/badge/MongoDB%20Atlas-yellow">
+    <a href="https://herokuapp.com/"><img alt="Deploy on Heroku" src="https://img.shields.io/badge/Heroku-yellow">
     <br/>
     <a href="https://www.npmjs.com/"><img alt="npm version" src="https://img.shields.io/badge/npm-6.14.6-yellow">
     <a href="https://expressjs.com/pt-br/"><img alt="Express version" src="https://img.shields.io/badge/express-4.17.1-yellow">
